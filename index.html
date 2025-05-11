@@ -4,22 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="le=edge">
+
   <title>Lenguajes de Marcas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Montserrat:wght@100..900&family=Roboto:wght@100..900&display=swap"
+        rel="stylesheet">
   <link rel="stylesheet" href="estilos/estilo1.css">
 </head>
 
 <body>
-  <header>
+<header class="encabezado-ondas">
+  <div class="contenido-header">
     <h1>Lenguajes de Marcas</h1>
-    <p>Temas y conceptos clave</p>
-    <div class="header-bottom">
-      <nav class="navigation">
-        <ul>
-          <li><a href="#" onclick="window.location.href='referencia.html'; return false;">Fuentes de consulta</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <p class="subtitulo">Temas y conceptos clave sobre lenguajes de marcas</p>
+  </div>
+
+</header>
 
   <main>
     <section class="definicion">
@@ -57,7 +60,7 @@
 
       </p>
           <audio controls>
-        <source src="music/no_me_platiques_mas.mp3" type="audio/mpeg">
+        <source src="audios/audio1.mp3" type="audio/mpeg">
          Tu navegador no soporta el audio.
           </audio>
     </section>
@@ -78,7 +81,7 @@
           sirven para encerrar fragmentos de contenido y aplicarles un comportamiento o estilo concreto.
           <br>
 
-          <pre><code>Por ejemplo, un documento HTML5 básico incluye al inicio la declaración 
+          <pre class="destacado"><code>Por ejemplo, un documento HTML5 básico incluye al inicio la declaración 
   &lt;!DOCTYPE html&gt; y las etiquetas &lt;html&gt;, &lt;head&gt; y &lt;body&gt;. 
     <br><br>
 Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&gt; contiene el contenido visible. Un ejemplo mínimo sería:
@@ -108,7 +111,11 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
           Aunque XHTML fue promovido por el W3C en los 2000s, con la llegada de HTML5 su uso se ha reducido, y hoy la
           mayoría de sitios emplean HTML5 clásico para evitar los requisitos estrictos de XML. Sin embargo, XHTML sirvió
           como ejercicio para “endurecer” las buenas prácticas de HTML (cerrar etiquetas, usar minúsculas, etc.).
-
+<br><br>
+               <audio controls>
+        <source src="audios/nanana.mp3" type="audio/mpeg">
+         Tu navegador no soporta el audio.
+          </audio>
     </section>
     
 
@@ -152,7 +159,7 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
         <br><br>
         “YAML es un lenguaje versátil y legible por humanos para serializar datos, que se utiliza a menudo para escribir
         archivos de configuración”.
-        <pre><code>Por ejemplo, una lista en YAML puede escribirse usando guiones y sangrías:
+        <pre class="destacado"><code>Por ejemplo, una lista en YAML puede escribirse usando guiones y sangrías:
         <br>
 - fruta: Manzana
   color: Rojo
@@ -193,6 +200,11 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
       geográfica.
     </ul>
 
+         <audio controls>
+        <source src="audios/nanana.mp3" type="audio/mpeg">
+         Tu navegador no soporta el audio.
+          </audio>
+
     <h3>Lenguajes de marcas documentales o científicos</h3>
     <p id="texto-lectura">Los lenguajes de marcas documentales o científicos se diseñan para la creación de documentos
       complejos, con notación especial para fórmulas, referencias, tablas de contenido, bibliografía, etc. </p>
@@ -224,7 +236,7 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
         validación.
         DocBook es semántico: en lugar de indicar directamente el estilo, marca la estructura del documento (libro,
         capítulo, sección, párrafo, listados de código, etc.) de forma neutra.
-        <pre><code>
+        <pre class="destacado"><code>
     Por ejemplo, un capítulo se describe con
     &lt;chapter&gt;&lt;title&gt;Título&lt;/title&gt;...contenido...&lt;/chapter&gt; 
     Sin decir si será impreso en negrita o itálica. Luego, hojas de estilo XSL (o procesadores especializados) transforman el DocBook a HTML, PDF, manpages, EPUB y
@@ -234,6 +246,11 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
    </code></pre>
       </li>
     </ul>
+
+         <audio controls>
+        <source src="audios/nanana.mp3" type="audio/mpeg">
+         Tu navegador no soporta el audio.
+          </audio>
 
     <h3>Lenguajes de marcas normativos</h3>
     <p id="texto-lectura">Los lenguajes de marcas normativos son aquellos que definen la estructura de otros documentos
@@ -271,6 +288,12 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
         Aunque hoy en día SGML ya casi no se utiliza directamente fuera de aplicaciones industriales muy especializadas
         (por ejemplo, bibliotecas grandes o manuales militares), es la “raíz” histórica de XML y DocBook.</li>
     </ul>
+
+         <audio controls>
+        <source src="audios/nanana.mp3" type="audio/mpeg">
+         Tu navegador no soporta el audio.
+          </audio>
+
     </section>
 
 
@@ -301,10 +324,14 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
           modelar experimentos científicos o definir estándares de datos empresariales. Esta flexibilidad explica por
           qué tecnologías basadas en XML/HTML (y ahora JSON/YAML) son tan ampliamente adoptadas.
         </li>
-        <br><br>
-
 
       </ul>
+
+           <audio controls>
+        <source src="audios/nanana.mp3" type="audio/mpeg">
+         Tu navegador no soporta el audio.
+          </audio>
+
     </section>
 
     <section>
@@ -320,14 +347,28 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
         <br><br>
         <li><strong>W3Schools:</strong> Tutoriales prácticos y referencias rápidas (aunque sin rigor formal), útiles
           para ejemplos de HTML, XML y JSON.</li>
-        <br><br>
       </ul>
+  
+       <audio controls>
+        <source src="audios/nanana.mp3" type="audio/mpeg">
+         Tu navegador no soporta el audio.
+          </audio>
+
     </section>
   </main>
 
   <footer>
     <p>Hecho por:</p>
     <p>Sergio  |  Irving  |  Lady  |  Guadalupe  |  Uriel  |  Jesus</p>
+        <div class="header-bottom">
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#" onclick="window.location.href='referencia.html'; return false;">Fuentes de consulta</a> </li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+  
   </footer>
 
   <!-- Modal -->

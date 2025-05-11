@@ -1,16 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #0000;
-    color: #333;
-  }
-  
-  header {
-    background-color: #004aad;
-    color: white;
-    padding: 20px 10px;
-    text-align: center;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+background-image: url('../img/fondo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #333;
+}
+
+
+header {
+  position: relative;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('../img/referencias.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+ header h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+header h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+/*----------------------------------------------------------------------------------------------------------------------------*/
+.encabezado-ondas {
+  position: relative;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('../img/encabezado.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 20px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contenido-header {
+  position: relative;
+  z-index: 2;
+}
+
+
+.subtitulo {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #e0e0e0;
+  margin-top: 10px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
 
   /* Estilo de la lista de navegación */
 .navigation ul {
@@ -30,16 +82,19 @@ body {
   .navigation a {
     font-size: 18px; /* Tamaño de fuente de los enlaces */
     font-weight: bold; /* Establece el texto en negrita */
-    color: black; /* Color blanco para el texto del enlace */
+    color: rgb(255, 255, 255); /* Color blanco para el texto del enlace */
     text-decoration: none; /* Elimina el subrayado */
   }
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 10px; /* Puedes ajustar el valor según lo necesites */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
   
-  main {
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
-    background-color: white;
-  }
+}
   .referencias ul {
     list-style: none;
     padding-left: 0;
@@ -53,13 +108,27 @@ body {
     padding-left: 0.5in;
   }
   
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #004aad;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+ footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #062c52;
+  color: white;
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
   }
-  
+
+  .navigation ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  main {
+    margin: 10px;
+    padding: 10px;
+  }
+}

@@ -10,14 +10,60 @@ background-image: url('../img/fondo.jpg');
 }
 
 
-header {  
-  background-image: url('../img/encabezado.jpg');
+header {
+  position: relative;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('../img/encabezado.jpg');
   background-size: cover;
-
+  background-position: center;
   color: white;
-  padding: 20px 10px;
+  padding: 60px 20px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
+
+header h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+header h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+.encabezado-ondas {
+  position: relative;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('../img/encabezado.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 20px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contenido-header {
+  position: relative;
+  z-index: 2;
+}
+
+
+.subtitulo {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #e0e0e0;
+  margin-top: 10px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
 
 .navigation ul {
   list-style: none;
@@ -27,7 +73,14 @@ header {
   justify-content: center;
   gap: 15px;
 }
-
+ /* Estilo de los enlaces dentro de la navegación */
+  .navigation a {
+    font-size: 18px; /* Tamaño de fuente de los enlaces */
+    font-weight: bold; /* Establece el texto en negrita */
+    color: rgb(255, 255, 255); /* Color blanco para el texto del enlace */
+    text-decoration: none; /* Elimina el subrayado */
+  }
+  
 .navigation button {
   background-color: #ffffff;
   border: 2px solid #004aad;
@@ -47,18 +100,40 @@ main {
   padding: 20px;
   max-width: 900px;
   margin: auto;
+  margin-top: 10px; /* Puedes ajustar el valor según lo necesites */
   background-color: white;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 12px;
+  
 }
 
 section {
   margin-bottom: 30px;
 }
-
 h2 {
   color: #004aad;
 }
+section h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #004aad;
+  display: inline-block;
+}
+section h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.destacado {
+  background: #eef6ff;
+  padding: 1rem;
+  border-left: 4px solid #034a97;
+  border-right: 4px solid #054f9e;
+  margin: 1rem 0;
+}
+
 
 .btn {
   margin-top: 10px;
@@ -110,6 +185,7 @@ h2 {
 
 pre {
   background-color: #eee;
+    font-family: 'Courier New', monospace;
   padding: 10px;
   overflow-x: auto;
   border-radius: 6px;
@@ -117,7 +193,25 @@ pre {
 
 footer {
   text-align: center;
-  padding: 10px;
-  background-color: #003e7e;
+  padding: 20px;
+  background-color: #062c52;
   color: white;
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  main {
+    margin: 10px;
+    padding: 10px;
+  }
 }
