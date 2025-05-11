@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenguajes de Marcas</title>
+  <link rel="stylesheet" href="estilos/estilo1.css">
+</head>
+
+<body>
+  <header>
+    <h1>Lenguajes de Marcas</h1>
+    <p>Temas y conceptos clave</p>
+    <div class="header-bottom">
+      <nav class="navigation">
+        <ul>
+          <li><a href="#" onclick="window.location.href='referencia.html'; return false;">Fuentes de consulta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="definicion">
+      <h2>¿Qué es un lenguaje de marcas?</h2>
+      <p id="texto-lectura">Un lenguaje de marcas es un sistema de codificación de documentos en el que, junto con el
+        texto, se incluyen etiquetas o marcas que añaden información sobre la estructura del contenido o su
+        presentación. Por ejemplo, en HTML las etiquetas &ltp&gt, &lth1&gt, &ltimg&gt, etc., indican la estructura y
+        formato del texto mostrado. A diferencia de los lenguajes de
+        programación, los lenguajes de marcas no tienen variables ni operaciones aritméticas; su función es describir o
+        presentar el contenido, no ejecutarlo. El uso histórico de lenguajes de marcas proviene del ámbito editorial
+        (entre autores y editores).
+        Los lenguajes de marcas se clasifican según su propósito principal. Por ejemplo, en el pasado se distinguían
+        entre marcado de presentación (enfocado al formato visual del texto) y marcado descriptivo (etiquetas semánticas
+        que describen el contenido sin dictar su aspecto). Hoy en día, una clasificación más común agrupa los lenguajes
+        en categorías como presentacionales, estructurales o descriptivos, documentales/científicos y normativos. En
+        términos generales:
+        <li><strong>Presentacionales:</strong> Indican directamente el formato de cada fragmento de texto (por ejemplo,
+          centrar, negrita, color). Eran fáciles de usar para documentos pequeños, pero poco flexibles para procesar
+          información automáticamente. HTML (originalmente) entraría aquí al usar etiquetas como &ltb&gt o atributos de
+          estilo.</li>
+        <br>
+        <li><strong>Estructurales/descriptivos: </strong> Etiquetan las partes del documento según su significado o
+          estructura lógica, sin especificar cómo representarlas. Por ejemplo, &lttitle&gt indica un título, pero el
+          navegador decide el estilo. XML y sus derivados son ejemplos paradigmas de marcado descriptivo.</li>
+        <br>
+        <li><strong>Documentales/científicos: </strong> Son lenguajes orientados a redactar documentos técnicos o
+          académicos complejos, enfocándose en la semántica del contenido (p. ej. fórmulas matemáticas, referencias
+          bibliográficas) en un formato que luego puede transformarse en distintos formatos de salida. LaTeX y DocBook
+          son paradigmas en esta categoría.</li>
+        <br>
+        <li><strong>Normativos: </strong> Lenguajes que definen la estructura de otros lenguajes o documentos
+          (esquemas, definiciones de tipo de documento). Incluyen DTD y XSD para XML, y el SGML en sí (Standard
+          Generalized Markup Language) como metalenguaje base. En esencia, son lenguajes para especificar marcos o
+          gramáticas.</li>
+
+      </p>
+          <audio controls>
+        <source src="music/no_me_platiques_mas.mp3" type="audio/mpeg">
+         Tu navegador no soporta el audio.
+          </audio>
+    </section>
+
+    <section>
+      <h2>Clasificación de lenguajes de marcas</h2>
+      <h3>Lenguajes de marcas de presentación</h3>
+      <ul>
+        <li><strong>HTML:</strong> Los lenguajes de marcas de presentación se centran en el formato visual del texto. El
+          más conocido es HTML (HyperText Markup Language), el estándar básico para construir páginas web. HTML permite
+          estructurar una página indicando encabezados (&lth1&gt–&lth6&gt), párrafos (&ltp&gt), listas, tablas, enlaces,
+          imágenes,
+          etc.
+          <br><br>
+          “HTML es el código que se utiliza para estructurar y desplegar una página web y sus contenidos”.
+          <br><br>
+          Es importante resaltar que HTML no es un lenguaje de programación, sino un lenguaje de marcado: sus etiquetas
+          sirven para encerrar fragmentos de contenido y aplicarles un comportamiento o estilo concreto.
+          <br>
+
+          <pre><code>Por ejemplo, un documento HTML5 básico incluye al inicio la declaración 
+  &lt;!DOCTYPE html&gt; y las etiquetas &lt;html&gt;, &lt;head&gt; y &lt;body&gt;. 
+    <br><br>
+Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&gt; contiene el contenido visible. Un ejemplo mínimo sería:
+<br>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Título de la página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1>Encabezado principal&lt;/h1&gt;
+&lt;p>Este es un párrafo.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+        <li><strong>XHTML:</strong> XHTML es HTML definido como aplicación XML: respeta todas las reglas de sintaxis de
+          XML. Por ello, XHTML es más estricto: todos los elementos deben estar bien anidados, en minúsculas, con
+          atributos entre comillas y debidamente cerrados (incluso las etiquetas vacías, p.ej. &lt;br/&gt;). Por
+          ejemplo, en
+          XHTML el elemento raíz &lt;html&gt; debe llevar el atributo de espacio de nombres xmlns y cerrarse
+          apropiadamente.
+          La principal ventaja es facilitar la interoperabilidad con otras tecnologías XML y el procesamiento riguroso
+          de los documentos; la desventaja es que los navegadores originales forzaban un comportamiento más tolerante
+          que a veces ignoraba errores en HTML puro.
+          <br>
+          Aunque XHTML fue promovido por el W3C en los 2000s, con la llegada de HTML5 su uso se ha reducido, y hoy la
+          mayoría de sitios emplean HTML5 clásico para evitar los requisitos estrictos de XML. Sin embargo, XHTML sirvió
+          como ejercicio para “endurecer” las buenas prácticas de HTML (cerrar etiquetas, usar minúsculas, etc.).
+
+    </section>
+    
+
+    <div id="miModal" class="modal">
+      <div class="modal-contenido">
+
+        <div id="contenidoModal"></div>
+      </div>
+    </div>
+    <h3> Lenguajes de marcas descriptivos o estructurales</h3>
+    <ul>
+      <li><strong>XML:</strong> El más importante de esta categoría es XML (Extensible Markup Language).
+        <br><br>
+        “XML es un lenguaje de marcado similar a HTML” que significa Extensible Markup Language y es una especificación
+        del W3C para un propósito general.
+        <br><br>
+        A diferencia de HTML, XML no tiene etiquetas predefinidas; el desarrollador define sus propias etiquetas según
+        la aplicación. Su propósito principal es el intercambio de datos entre distintos sistemas (p.ej. aplicaciones
+        web, servicios, bases de datos) de forma estructurada.
+        <br>
+        Un documento XML debe ser bien formado: cada etiqueta abierta debe cerrarse, respetar anidación correcta y tener
+        un único elemento raíz. Además, puede validarse contra un esquema (DTD o XSD) para comprobar su estructura. XML
+        es ampliamente usado en servicios web (SOAP), sindicaciones (RSS), configuración de aplicaciones, y como base
+        para otros lenguajes (por ejemplo, XHTML, MathML para matemáticas, SVG para gráficos vectoriales, XUL, etc.). Un
+        ejemplo sencillo de XML podría ser:
+        <br>
+        <button onclick="mostrarModal('xml')">Ver ejemplo.</button>
+        <br>
+        En este fragmento, &lt;persona&gt;, &lt;nombre&gt;, &lt;edad&gt;, &lt;email&gt; son etiquetas definidas por el
+        autor para describir los
+        datos de una persona.
+        <br><br>
+      </li>
+      <strong>YAML/JSON</strong> <br><br>
+      <li><strong>YAML:</strong> En la categoría descriptiva se incluyen también YAML y JSON, que, aunque no son
+        estrictamente “lenguajes de marcas” tradicionales (no usan etiquetas angulares), se usan para serializar datos
+        de forma estructurada y legible.
+        <br><br>
+        Es un formato de serialización de datos legible por humanos, diseñado para configurar aplicaciones y describir
+        estructuras complejas con una sintaxis clara basada en indentación.
+        <br><br>
+        “YAML es un lenguaje versátil y legible por humanos para serializar datos, que se utiliza a menudo para escribir
+        archivos de configuración”.
+        <pre><code>Por ejemplo, una lista en YAML puede escribirse usando guiones y sangrías:
+        <br>
+- fruta: Manzana
+  color: Rojo
+- fruta: Plátano
+  color: Amarillo
+        </code></pre>
+
+        YAML admite colecciones (listas, diccionarios) y escalables (números, cadenas, booleanos). Su principal ventaja
+        es la simplicidad y legibilidad para los humanos, aunque su sintaxis sensible a la indentación exige cuidado.
+
+        <br><br>
+      </li>
+      <li><strong>JSON:</strong> (JavaScript Object Notation) es un formato ligero de intercambio de datos basado en
+        texto. Según IBM, “JSON es un formato ligero de intercambio de datos” que resulta fácil de leer y escribir tanto
+        para humanos como para máquinas. Utiliza convenciones similares a los lenguajes de la familia C (clave-valor
+        entre llaves y listas entre corchetes).
+        <br><br>
+        <button onclick="mostrarModal('json')">Ver ejemplo.</button>
+        <br><br>
+        JSON es muy popular en aplicaciones web modernas (APIs REST, configuración, almacenamiento en bases de datos
+        NoSQL) por su simplicidad y compatibilidad. Aunque su origen es JavaScript, hoy es independiente de cualquier
+        lenguaje de programació. JSON es más estricto en sintaxis que YAML (p. ej. obliga a comillas en cadenas) pero
+        también más fácil de procesar automáticamente.
+        <br><br>
+      </li>
+      <li><strong>GML:</strong> GML es un sublenguaje de XML diseñado por el Consorcio Geoespacial Abierto (OGC) para
+        representar información geográfica. Se define como una gramática en esquema XML para modelar características
+        geográficas (puntos, líneas, polígonos, atributos) en forma legible. GML permite intercambiar datos GIS
+        (Sistemas de Información Geográfica) entre programas, y se usa en servicios web de mapas y bases de datos
+        geoespaciales. Su sintaxis es XML con etiquetas como &lt;gml:Point&gt;, &lt;gml:coordinates&gt;, etc., definidas
+        por el
+        estándar OGC.
+        <br><br>
+        <button onclick="mostrarModal('gml')">Ver ejemplo.</button>
+      </li>
+      <br>
+      GML es especialmente útil para representar mapas, datos satelitales y cualquier información que requiera precisión
+      geográfica.
+    </ul>
+
+    <h3>Lenguajes de marcas documentales o científicos</h3>
+    <p id="texto-lectura">Los lenguajes de marcas documentales o científicos se diseñan para la creación de documentos
+      complejos, con notación especial para fórmulas, referencias, tablas de contenido, bibliografía, etc. </p>
+    <ul>
+      <li><strong>LaTeX:</strong> Un representante emblemático es LaTeX, un sistema de preparación de documentos basado
+        en el software TeX de Donald Knuth. LaTeX facilita la escritura de documentos académicos o técnicos de alta
+        calidad.
+        <br><br>
+        “LaTeX es un sistema de preparación de documentos que facilita la escritura de documentos científicos y
+        técnicos”, permitiendo expresar con facilidad fórmulas matemáticas complejas, gestionar referencias y formatear
+        el documento de forma automática.
+        <br><br>
+        A diferencia de los procesadores de texto WYSIWYG (como Word), en LaTeX el autor escribe el contenido junto con
+        comandos de formato en texto plano (p. ej. \section{} para secciones, \begin{equation} para ecuaciones). Tras
+        compilar el archivo .tex, LaTeX produce salida PDF/PS de alta calidad tipográfica. Por ejemplo, el código
+        \(\int_0^1 x^2 dx\) genera la integral matemática correspondiente. LaTeX separa claramente contenido (texto,
+        ecuaciones) de formato (estilo de capítulo, numeración de ecuaciones, índices), lo cual es ventajoso en
+        documentos extensos. Hoy en día LaTeX es el estándar de facto en publicaciones científicas de física,
+        matemáticas, ingeniería, y ciencias sociales (tesis, artículos de revista).
+        <br><br>
+      </li>
+      <li><strong>DocBook:</strong> DocBook se originó como una DTD SGML y luego versión XML destinada a documentar
+        software, manuales técnicos y libros.
+        <br><br>
+        “DocBook es una aplicación del estándar SGML/XML e incluye una DTD propia que se utiliza de manera más destacada
+        en el área de la documentación técnica”.
+        <br><br>
+        En la versión actual (DocBook 5) está formalmente definido por un esquema RELAX NG con reglas Schematron para
+        validación.
+        DocBook es semántico: en lugar de indicar directamente el estilo, marca la estructura del documento (libro,
+        capítulo, sección, párrafo, listados de código, etc.) de forma neutra.
+        <pre><code>
+    Por ejemplo, un capítulo se describe con
+    &lt;chapter&gt;&lt;title&gt;Título&lt;/title&gt;...contenido...&lt;/chapter&gt; 
+    Sin decir si será impreso en negrita o itálica. Luego, hojas de estilo XSL (o procesadores especializados) transforman el DocBook a HTML, PDF, manpages, EPUB y
+    otros formatos. 
+    Este enfoque permite escribir la documentación una sola vez y publicarla en múltiples formatos. 
+    DocBook cuenta con un comité técnico (OASIS) que mantiene su estándar.
+   </code></pre>
+      </li>
+    </ul>
+
+    <h3>Lenguajes de marcas normativos</h3>
+    <p id="texto-lectura">Los lenguajes de marcas normativos son aquellos que definen la estructura de otros documentos
+      de marcado. En el contexto XML, los esquemas más comunes son DTD (Document Type Definition) y XSD (XML Schema
+      Definition). </p>
+
+    <ul>
+      <li><strong>DTD:</strong> Un DTD es un documento que especifica qué elementos y atributos pueden aparecer en un
+        documento XML, su orden y repetición, etc.
+        <br><br>
+        “Un esquema DTD…define la estructura válida de un documento XML: los elementos, atributos… que pueden aparecer,
+        el orden y el número de veces que pueden aparecer”.
+        <br><br>
+        El procesador XML usa el DTD para validar un documento, comprobando que siga las reglas establecidas. Los DTD
+        surgieron originalmente con SGML y fueron integrados en XML para la validación gramatical.
+        Sin embargo, son relativamente sencillos y carecen de soporte para aspectos modernos (p. ej. namespaces o tipos
+        de datos complejos); hoy suelen reemplazarse por XSD.
+        <br><br>
+      </li>
+      <li><strong>XSD (XML Schema):</strong> XSD (XML Schema) es un lenguaje de esquema basado en XML, desarrollado por
+        el W3C, mucho más potente que DTD. Es un lenguaje de esquema utilizado para describir la estructura y las
+        restricciones de los contenidos de los documentos XML de una forma muy precisa. A diferencia de DTD, XSD se
+        escribe en XML (por lo que es extensible y legible por procesadores XML estándar) y permite definir tipos de
+        datos (números, cadenas, fechas, patterns, enums, etc.), cardinalidades precisas y namespaces.
+        <br><br>
+        Por ejemplo, en XSD se puede especificar que el elemento &lt;edad&gt; debe ser un entero entre 0 y 120, algo
+        imposible
+        en DTD. XSD es recomendado por el W3C desde 2001 para validar documentos XML complejos.
+        <br><br>
+      </li>
+      <li><strong>SGML: </strong> Es un metalenguaje ISO (ISO 8879:1986) del que derivan muchos otros lenguajes de
+        marcado. SGML define una sintaxis muy rica para incluir marcas en textos y usar esquemas de validación (DTD). En
+        su día fue la base para estandarizar documentos a gran escala, pero su complejidad lo hizo poco práctico para
+        aplicaciones generales. De hecho, HTML surgió como una simplificación de SGML para documentos en internet.
+        Aunque hoy en día SGML ya casi no se utiliza directamente fuera de aplicaciones industriales muy especializadas
+        (por ejemplo, bibliotecas grandes o manuales militares), es la “raíz” histórica de XML y DocBook.</li>
+    </ul>
+    </section>
+
+
+    <section>
+      <h2>Usos comunes</h2>
+      <p id="texto-lectura">Los lenguajes de marcas se usan en multitud de contextos:</p>
+      <ul>
+        <li><strong>Desarrollo Web:</strong> HTML es el pilar de cualquier página web. CSS y JavaScript actúan sobre su
+          estructura. XML también se usa en webs (p.ej. para datos, SVG, RSS). JSON y YAML se emplean masivamente en
+          APIs, configuraciones y bases de datos documentales.</li>
+        <br><br>
+        <li><strong>Intercambio de datos:</strong> XML, JSON y YAML se usan para comunicar datos entre servicios (web
+          services, REST APIs, archivos de configuración). JSON es muy popular en aplicaciones web y servicios modernos.
+        </li>
+        <br><br>
+        <li><strong>Documentación técnica:</strong> LaTeX y DocBook se emplean para redactar manuales, libros y
+          artículos científicos. Permiten generar salidas profesionales (PDF, HTML, ePub) a partir de una fuente
+          semántica.</li>
+        <br><br>
+        <li><strong>Normalización y validación:</strong> DTD y XSD se usan cuando es necesario definir o validar la
+          estructura de documentos XML (por ejemplo, archivos de configuración complejos, mensajes empresariales,
+          formatos de datos especializados). SGML sigue vigente en entornos donde los documentos deben seguir reglas
+          formales muy estrictas.</li>
+        <br><br>
+        <li><strong>Datos geoespaciales:</strong> GML se usa en sistemas de información geográfica para intercambiar
+          mapas y datos espaciales en proyectos de cartografía, agricultura de precisión, aplicaciones de GPS, etc.
+          En resumen, los lenguajes de marcas son ubicuos: permiten desde construir la interfaz de un sitio web hasta
+          modelar experimentos científicos o definir estándares de datos empresariales. Esta flexibilidad explica por
+          qué tecnologías basadas en XML/HTML (y ahora JSON/YAML) son tan ampliamente adoptadas.
+        </li>
+        <br><br>
+
+
+      </ul>
+    </section>
+
+    <section>
+      <h2>Recursos útiles</h2>
+      <p id="texto-lectura">Para profundizar en estos lenguajes se recomiendan recursos oficiales y educativos de
+        calidad:</p>
+      <ul>
+        <li><strong>W3C (World Wide Web Consortium):</strong> Especificaciones formales de HTML5, XML, XML Schema,
+          SGML, etc. (p. ej. la especificación HTML5 en https://html.spec.whatwg.org).</li>
+        <br><br>
+        <li><strong>MDN Web Docs (Mozilla):</strong> Guía completa en español para HTML, CSS y XML (por ejemplo, MDN
+          Learn HTML).</li>
+        <br><br>
+        <li><strong>W3Schools:</strong> Tutoriales prácticos y referencias rápidas (aunque sin rigor formal), útiles
+          para ejemplos de HTML, XML y JSON.</li>
+        <br><br>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho por:</p>
+    <p>Sergio  |  Irving  |  Lady  |  Guadalupe  |  Uriel  |  Jesus</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal"
+    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+    <div
+      style="background:#fff; padding:20px; max-width:600px; margin:100px auto; border-radius:10px; position:relative;">
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-texto"></p>
+      <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="script/lector1.js"></script>
+  <script src="script/modal.js"></script>
+</body>
+
+</html>

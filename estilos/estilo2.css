@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #0000;
+    color: #333;
+  }
+  
+  header {
+    background-color: #004aad;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  /* Estilo de la lista de navegación */
+.navigation ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+    display: flex; /* Muestra los elementos en una fila */
+    justify-content: center; /* Centra los elementos en la fila */
+  }
+  
+  /* Estilo de cada elemento de la lista */
+  .navigation li {
+    margin: 0 10px; /* Añade margen a la izquierda y derecha de los elementos */
+  }
+  
+  /* Estilo de los enlaces dentro de la navegación */
+  .navigation a {
+    font-size: 18px; /* Tamaño de fuente de los enlaces */
+    font-weight: bold; /* Establece el texto en negrita */
+    color: black; /* Color blanco para el texto del enlace */
+    text-decoration: none; /* Elimina el subrayado */
+  }
+  
+  main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+  }
+  .referencias ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .referencias li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: justify;
+    text-indent: -0.5in;
+    padding-left: 0.5in;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004aad;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
