@@ -7,27 +7,28 @@
   <meta http-equiv="X-UA-Compatible" content="le=edge">
 
   <title>Lenguajes de Marcas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link 
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Montserrat:wght@100..900&family=Roboto:wght@100..900&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Montserrat:wght@100..900&family=Roboto:wght@100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="estilos/estilo1.css">
 </head>
 
 <body>
-<header class="encabezado-ondas">
-  <div class="contenido-header">
-    <h1>Lenguajes de Marcas</h1>
-    <p class="subtitulo">Temas y conceptos clave sobre lenguajes de marcas</p>
-  </div>
+  <header class="encabezado-ondas">
+    <div class="contenido-header">
+      <h1>Lenguajes de Marcas</h1>
+      <p class="subtitulo">Temas y conceptos clave sobre lenguajes de marcas</p>
+    </div>
 
-</header>
+  </header>
 
   <main>
     <section class="definicion">
       <h2>¿Qué es un lenguaje de marcas?</h2>
-      <p class="justificar" id="texto-lectura">Un lenguaje de marcas es un sistema de codificación de documentos en el que, junto con el
+      <p class="justificar" id="texto-lectura">Un lenguaje de marcas es un sistema de codificación de documentos en el
+        que, junto con el
         texto, se incluyen etiquetas o marcas que añaden información sobre la estructura del contenido o su
         presentación. Por ejemplo, en HTML las etiquetas &ltp&gt, &lth1&gt, &ltimg&gt, etc., indican la estructura y
         formato del texto mostrado. A diferencia de los lenguajes de
@@ -39,31 +40,63 @@
         que describen el contenido sin dictar su aspecto). Hoy en día, una clasificación más común agrupa los lenguajes
         en categorías como presentacionales, estructurales o descriptivos, documentales/científicos y normativos. En
         términos generales:
-        <li><strong>Presentacionales:</strong> Indican directamente el formato de cada fragmento de texto (por ejemplo,
-          centrar, negrita, color). Eran fáciles de usar para documentos pequeños, pero poco flexibles para procesar
-          información automáticamente. HTML (originalmente) entraría aquí al usar etiquetas como &ltb&gt o atributos de
-          estilo.</li>
-        <br>
-        <li><strong>Estructurales/descriptivos: </strong> Etiquetan las partes del documento según su significado o
-          estructura lógica, sin especificar cómo representarlas. Por ejemplo, &lttitle&gt indica un título, pero el
-          navegador decide el estilo. XML y sus derivados son ejemplos paradigmas de marcado descriptivo.</li>
-        <br>
-        <li><strong>Documentales/científicos: </strong> Son lenguajes orientados a redactar documentos técnicos o
-          académicos complejos, enfocándose en la semántica del contenido (p. ej. fórmulas matemáticas, referencias
-          bibliográficas) en un formato que luego puede transformarse en distintos formatos de salida. LaTeX y DocBook
-          son paradigmas en esta categoría.</li>
-        <br>
-        <li><strong>Normativos: </strong> Lenguajes que definen la estructura de otros lenguajes o documentos
-          (esquemas, definiciones de tipo de documento). Incluyen DTD y XSD para XML, y el SGML en sí (Standard
-          Generalized Markup Language) como metalenguaje base. En esencia, son lenguajes para especificar marcos o
-          gramáticas.</li>
+
+      <section class="acordeon">
+
+        <div class="item">
+          <button class="titulo">⦿ Presentacionales</button>
+          <div class="contenido">
+            <p>Indican directamente el formato de cada fragmento de texto (por ejemplo, centrar, negrita, color). Eran
+              fáciles de usar para documentos pequeños, pero poco flexibles para procesar información automáticamente.
+              HTML (originalmente) entraría aquí al usar etiquetas como <code>&lt;b&gt;</code> o atributos de estilo.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button class="titulo">⦿ Estructurales / Descriptivos</button>
+          <div class="contenido">
+            <p>Etiquetan las partes del documento según su significado o estructura lógica. Por ejemplo,
+              <code>&lt;title&gt;</code> indica un título, pero el navegador decide el estilo. XML y sus derivados son
+              ejemplos paradigmas de marcado descriptivo.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button class="titulo">⦿ Documentales / Científicos</button>
+          <div class="contenido">
+            <p>Lenguajes orientados a redactar documentos técnicos o académicos complejos, enfocándose en la semántica
+              del contenido. LaTeX y DocBook son ejemplos destacados.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button class="titulo">⦿ Normativos</button>
+          <div class="contenido">
+            <p>Lenguajes que definen la estructura de otros lenguajes o documentos. Incluyen DTD, XSD y SGML como
+              metalenguaje base.</p>
+          </div>
+        </div>
+      </section>
 
       </p>
-          <audio controls>
-        <source src="audios/audio1.mp3" type="audio/mpeg">
-         Tu navegador no soporta el audio.
-          </audio>
+      <audio controls>
+        <source src="audios/audio1.mp4" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+      </audio>
     </section>
+
+    <script>
+      document.querySelectorAll('.titulo').forEach(boton => {
+        boton.addEventListener('click', () => {
+          const item = boton.parentElement;
+          const abierto = item.classList.contains('activo');
+          document.querySelectorAll('.item').forEach(i => i.classList.remove('activo'));
+          if (!abierto) item.classList.add('activo');
+        });
+      });
+    </script>
 
     <section>
       <h2>Clasificación de lenguajes de marcas</h2>
@@ -111,13 +144,13 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
           Aunque XHTML fue promovido por el W3C en los 2000s, con la llegada de HTML5 su uso se ha reducido, y hoy la
           mayoría de sitios emplean HTML5 clásico para evitar los requisitos estrictos de XML. Sin embargo, XHTML sirvió
           como ejercicio para “endurecer” las buenas prácticas de HTML (cerrar etiquetas, usar minúsculas, etc.).
-<br><br>
-               <audio controls>
-        <source src="audios/nanana.mp3" type="audio/mpeg">
-         Tu navegador no soporta el audio.
+          <br><br>
+          <audio controls>
+            <source src="audios/audio2.aac" type="audio/mpeg">
+            Tu navegador no soporta el audio.
           </audio>
     </section>
-    
+
 
     <div id="miModal" class="modal">
       <div class="modal-contenido">
@@ -200,10 +233,10 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
       geográfica.
     </ul>
 
-         <audio controls>
-        <source src="audios/nanana.mp3" type="audio/mpeg">
-         Tu navegador no soporta el audio.
-          </audio>
+    <audio controls>
+      <source src="audios/audio3.m4a" type="audio/mpeg">
+      Tu navegador no soporta el audio.
+    </audio>
 
     <h3>Lenguajes de marcas documentales o científicos</h3>
     <p id="texto-lectura">Los lenguajes de marcas documentales o científicos se diseñan para la creación de documentos
@@ -247,10 +280,10 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
       </li>
     </ul>
 
-         <audio controls>
-        <source src="audios/nanana.mp3" type="audio/mpeg">
-         Tu navegador no soporta el audio.
-          </audio>
+    <audio controls>
+      <source src="audios/audio4.mp4" type="audio/mpeg">
+      Tu navegador no soporta el audio.
+    </audio>
 
     <h3>Lenguajes de marcas normativos</h3>
     <p id="texto-lectura">Los lenguajes de marcas normativos son aquellos que definen la estructura de otros documentos
@@ -289,10 +322,10 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
         (por ejemplo, bibliotecas grandes o manuales militares), es la “raíz” histórica de XML y DocBook.</li>
     </ul>
 
-         <audio controls>
-        <source src="audios/nanana.mp3" type="audio/mpeg">
-         Tu navegador no soporta el audio.
-          </audio>
+    <audio controls>
+      <source src="audios/audio5.mp4" type="audio/mpeg">
+      Tu navegador no soporta el audio.
+    </audio>
 
     </section>
 
@@ -327,10 +360,10 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
 
       </ul>
 
-           <audio controls>
-        <source src="audios/nanana.mp3" type="audio/mpeg">
-         Tu navegador no soporta el audio.
-          </audio>
+      <audio controls>
+        <source src="audios/audio6.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+      </audio>
 
     </section>
 
@@ -348,27 +381,36 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
         <li><strong>W3Schools:</strong> Tutoriales prácticos y referencias rápidas (aunque sin rigor formal), útiles
           para ejemplos de HTML, XML y JSON.</li>
       </ul>
-  
-       <audio controls>
-        <source src="audios/nanana.mp3" type="audio/mpeg">
-         Tu navegador no soporta el audio.
-          </audio>
 
+      <audio controls>
+        <source src="audios/audio7.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+      </audio>
+    </section>
+
+    <section class="video-section">
+      <h2>Video informativo sobre Lenguajes de Marcas</h2>
+      <div class="video-responsive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3CZCV5-HVRg?si=6Ds0hugJhK9Enn3z"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>Hecho por:</p>
-    <p>Sergio  |  Irving  |  Lady  |  Guadalupe  |  Uriel  |  Jesus</p>
-        <div class="header-bottom">
-            <nav class="navigation">
-                <ul>
-                    <li><a href="#" onclick="window.location.href='referencia.html'; return false;">Fuentes de consulta</a> </li>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-  
+    <div class="header-bottom">
+      <nav class="navigation">
+        <ul>
+          <li><a href="#" onclick="window.location.href='referencia.html'; return false;">Fuentes de consulta</a> </li>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <p>Todos los derechos reservados<span class="fecha"> &copy; Desarrollado por Sergio | Irving | Lady | Guadalupe |
+        Uriel | Jesus</span></p>
+
   </footer>
 
   <!-- Modal -->

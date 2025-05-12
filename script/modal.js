@@ -1,8 +1,16 @@
+  const fecha = document.querySelector(".fecha");
+  console.log(fecha); 
+
+  document.addEventListener("DOMContentLoaded", () => {
+    fechaActual();
+  });
+
 function mostrarModal(tipo) {
   const modal = document.getElementById("miModal");
   const titulo = document.getElementById("modal-titulo");
     const texto = document.getElementById("modal-texto");
     const contenido = document.getElementById("contenidoModal");
+
 
   
     if (tipo === "html") {
