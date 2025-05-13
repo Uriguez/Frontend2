@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="le=edge">
-
+  <meta name="date" content="2025-03-09">
   <title>Lenguajes de Marcas</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -521,8 +521,8 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
         </ul>
       </nav>
     </div>
-    <p>Todos los derechos reservados<span class="fecha"> &copy; Desarrollado por Sergio | Irving | Lady | Guadalupe |
-        Uriel | Jesus</span></p>
+    <p>Todos los derechos reservados<span class="fecha"> &copy; 2025, Desarrollado por Sergio | Irving | Lady | Guadalupe |
+        Uriel | Jesus</span></p>  
 
   </footer>
 
@@ -563,6 +563,14 @@ document.querySelectorAll('.carrusel').forEach(carrusel => {
     const navList = document.querySelector('.nav-list');
     navList.classList.toggle('active');
   }
+
+  // Cierra el menú al hacer clic en cualquier enlace del menú
+  document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+      const navList = document.querySelector('.nav-list');
+      navList.classList.remove('active');
+    });
+  });
 </script>
 
 </body>

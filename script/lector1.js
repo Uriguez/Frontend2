@@ -1,7 +1,11 @@
+const fecha = document.querySelector(".fecha");
 let lecturaEnCurso = false;
 let indiceFrase = 0;
 let spans = [];
 
+document.addEventListener("DOMContentLoaded", () => {
+fechaActual();
+});
 function leerFrases() {
   if (lecturaEnCurso) return;
 

@@ -40,7 +40,6 @@ header h1::after {
 
 /*----------------------------------------------------------------------------------------------------------------------------*/
 .encabezado-ondas {
-  position: relative;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('../img/encabezado.jpg');
   background-size: cover;
   background-position: center;
@@ -48,6 +47,9 @@ header h1::after {
   padding: 80px 20px 0;
   text-align: center;
   overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .contenido-header {
@@ -171,6 +173,8 @@ main {
 
 section {
   margin-bottom: 30px;
+  scroll-margin-top: 180px; /* ajusta según la altura real del encabezado */
+
 }
 h2 {
   color: #0056b3; /* Azul fuerte */
