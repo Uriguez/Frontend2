@@ -64,6 +64,10 @@ header h1::after {
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------*/
+.navigation {
+  padding: 5px;
+  text-align: center;
+}
 
 .navigation ul {
   list-style: none;
@@ -72,6 +76,7 @@ header h1::after {
   display: flex;
   justify-content: center;
   gap: 15px;
+  
 }
  /* Estilo de los enlaces dentro de la navegación */
   .navigation a {
@@ -111,8 +116,12 @@ section {
   margin-bottom: 30px;
 }
 h2 {
-  color: #004aad;
-}
+  color: #0056b3; /* Azul fuerte */
+  font-size: 24px;
+  margin-top: 30px;
+  border-left: 5px solid #0077cc;
+  padding-left: 10px;
+} 
 section h2 {
   font-size: 2rem;
   margin-top: 2rem;
@@ -161,6 +170,9 @@ section h3 {
   transition: background 0.3s ease;
   font-weight: bold;
   margin-bottom: 0px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 6px auto; /* centrado + separación más limpia */
 }
 
 .titulo:hover {
@@ -233,6 +245,15 @@ li {
   background-color: yellow;
 }
 
+.imagen-ejemplo {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
 /* Estilo del modal */
 .modal {
   display: none;
@@ -296,7 +317,92 @@ footer {
   margin-top: 40px;
 }
 
+/*ANIMACIONES---------------------------------------------------------------------------*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeInUp 1s ease;
+}
+
+.carrusel {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 500px;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%; /* 3 imágenes */
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  background-color: white;
+}
+
+.slide img {
+  width: 100%;           /* Que ocupe todo el ancho del contenedor */
+  height: 350px;         /* Altura fija para uniformidad */
+  object-fit: contain;     /* Recorta la imagen sin deformarla */
+  border-radius: 10px 10px 0 0;
+}
+
+.slide p {
+  font-size: 1rem;
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin: 0;
+  font-weight: bold;
+  color: #004aad;
+}
+
+.controles {
+  margin-top: 15px;
+}
+
+.controles button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  margin: 0 10px;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.controles button:hover {
+  background-color: #002f6c;
+}
+
+/* Estilo para celulares" */
 @media screen and (max-width: 600px) {
+  .titulo {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+}
+.contenido p {
+  font-size: 0.9rem;
+}
   header h1 {
     font-size: 1.8rem;
   }

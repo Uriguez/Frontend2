@@ -7,11 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="le=edge">
 
   <title>Lenguajes de Marcas</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Montserrat:wght@100..900&family=Roboto:wght@100..900&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="estilos/estilo1.css">
 </head>
 
@@ -24,9 +26,19 @@
 
   </header>
 
+<nav class="navigation">
+  <ul>
+    <li><a style="color: #000000" href="#definicion">¿Qué es?</a></li>
+    <li><a style="color: #000000" href="#clasificacion">Clasificaciones</a></li>
+    <li><a style="color: #000000" href="#usos">Usos</a></li>
+    <li><a style="color: #000000" href="#recursos">Recursos</a></li>
+    <li><a style="color: #000000" href="#video">Video</a></li>
+  </ul>
+</nav>
+
   <main>
-    <section class="definicion">
-      <h2>¿Qué es un lenguaje de marcas?</h2>
+    <section class="definicion" id="definicion">
+      <h2><i class="fa-solid fa-lines-leaning"></i> ¿Qué es un lenguaje de marcas?</h2>
       <p class="justificar" id="texto-lectura">Un lenguaje de marcas es un sistema de codificación de documentos en el
         que, junto con el
         texto, se incluyen etiquetas o marcas que añaden información sobre la estructura del contenido o su
@@ -41,7 +53,12 @@
         en categorías como presentacionales, estructurales o descriptivos, documentales/científicos y normativos. En
         términos generales:
 
-      <section class="acordeon">
+      </p>
+            <audio controls>
+        <source src="audios/audio1.mp4" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+      </audio>
+          <section class="acordeon">
 
         <div class="item">
           <button class="titulo">⦿ Presentacionales</button>
@@ -80,12 +97,10 @@
         </div>
       </section>
 
-      </p>
-      <audio controls>
-        <source src="audios/audio1.mp4" type="audio/mpeg">
-        Tu navegador no soporta el audio.
-      </audio>
-    </section>
+      <section>
+  <h3 style="color: rgb(215, 8, 8);">Ejemplo de Lenguaje de Marcas</h3>
+  <img src="img/marcas.jpg" alt="Ejemplo de HTML" class="imagen-ejemplo">
+</section>
 
     <script>
       document.querySelectorAll('.titulo').forEach(boton => {
@@ -98,9 +113,31 @@
       });
     </script>
 
-    <section>
-      <h2>Clasificación de lenguajes de marcas</h2>
-      <h3>Lenguajes de marcas de presentación</h3>
+    <section id="clasificacion">
+      <h2><i class="fa-solid fa-tags"></i> Clasificación de lenguajes de marcas</h2>
+     <!-- CARRUSEL <h3 style="color: red;">Lenguajes de marcas de presentación</h3> -->
+       <section class="carrusel">
+  <h3><i class="fa-solid fa-images"></i> Ejemplos</h3>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="img/html.png" alt="Lenguaje Descriptivo">
+        <p>HTML</p>
+      </div>
+      <div class="slide">
+        <img src="img/xhtml.jpeg" alt="Lenguaje Documental">
+        <p>XHTML</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="controles">
+    <button class="btn-prev">←</button>
+    <button class="btn-next">→</button>
+  </div>
+</section>
+
+
       <ul>
         <li><strong>HTML:</strong> Los lenguajes de marcas de presentación se centran en el formato visual del texto. El
           más conocido es HTML (HyperText Markup Language), el estándar básico para construir páginas web. HTML permite
@@ -113,6 +150,7 @@
           Es importante resaltar que HTML no es un lenguaje de programación, sino un lenguaje de marcado: sus etiquetas
           sirven para encerrar fragmentos de contenido y aplicarles un comportamiento o estilo concreto.
           <br>
+      <i class="fa-solid fa-code"></i>
 
           <pre class="destacado"><code>Por ejemplo, un documento HTML5 básico incluye al inicio la declaración 
   &lt;!DOCTYPE html&gt; y las etiquetas &lt;html&gt;, &lt;head&gt; y &lt;body&gt;. 
@@ -158,7 +196,37 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
         <div id="contenidoModal"></div>
       </div>
     </div>
-    <h3> Lenguajes de marcas descriptivos o estructurales</h3>
+    <h3 style="color: green;"> Lenguajes de marcas descriptivos o estructurales</h3>
+     <!-- CARRUSEL ---------------------------------------------------------------------- -->
+     <section class="carrusel">
+  <h3><i class="fa-solid fa-images"></i> Ejemplos</h3>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="img/xml.png" alt="XML">
+        <p>XML</p>
+      </div>
+      <div class="slide">
+        <img src="img/yaml.png" alt="YAML">
+        <p>YAML</p>
+      </div>
+      <div class="slide">
+        <img src="img/json.jpeg" alt="JSON">
+        <p>JSON</p>
+      </div>
+      <div class="slide">
+        <img src="img/gml.jpg" alt="GML">
+        <p>GML</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="controles">
+    <button class="btn-prev">←</button>
+    <button class="btn-next">→</button>
+  </div>
+</section>
+
     <ul>
       <li><strong>XML:</strong> El más importante de esta categoría es XML (Extensible Markup Language).
         <br><br>
@@ -238,7 +306,30 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
       Tu navegador no soporta el audio.
     </audio>
 
-    <h3>Lenguajes de marcas documentales o científicos</h3>
+
+    <h3 style="color: green;">Lenguajes de marcas documentales o científicos</h3>
+       <!-- CARRUSEL ---------------------------------------------------------------------- -->
+     <section class="carrusel">
+  <h3><i class="fa-solid fa-images"></i> Ejemplos</h3>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="img/latex.jpeg" alt="LATEX">
+        <p>LaTeX</p>
+      </div>
+      <div class="slide">
+        <img src="img/docbook.png" alt="DOCBOOK">
+        <p>DocBook</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="controles">
+    <button class="btn-prev">←</button>
+    <button class="btn-next">→</button>
+  </div>
+</section>
+
     <p id="texto-lectura">Los lenguajes de marcas documentales o científicos se diseñan para la creación de documentos
       complejos, con notación especial para fórmulas, referencias, tablas de contenido, bibliografía, etc. </p>
     <ul>
@@ -285,7 +376,33 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
       Tu navegador no soporta el audio.
     </audio>
 
-    <h3>Lenguajes de marcas normativos</h3>
+    <h3 style="color: green;">Lenguajes de marcas normativos</h3>
+  <!-- CARRUSEL ---------------------------------------------------------------------- -->
+     <section class="carrusel">
+  <h3><i class="fa-solid fa-images"></i> Ejemplos</h3>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="img/dtd.png" alt="DTD">
+        <p>DTD</p>
+      </div>
+      <div class="slide">
+        <img src="img/xsd.png" alt="XSD">
+        <p>XSD (XML Schema)</p>
+      </div>
+        <div class="slide">
+        <img src="img/sgml.jpeg" alt="SGML">
+        <p>SGML</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="controles">
+    <button class="btn-prev">←</button>
+    <button class="btn-next">→</button>
+  </div>
+</section>
+
     <p id="texto-lectura">Los lenguajes de marcas normativos son aquellos que definen la estructura de otros documentos
       de marcado. En el contexto XML, los esquemas más comunes son DTD (Document Type Definition) y XSD (XML Schema
       Definition). </p>
@@ -330,8 +447,8 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
     </section>
 
 
-    <section>
-      <h2>Usos comunes</h2>
+    <section id="usos">
+      <h2><i class="fa-brands fa-creative-commons-remix"></i> Usos comunes</h2>
       <p id="texto-lectura">Los lenguajes de marcas se usan en multitud de contextos:</p>
       <ul>
         <li><strong>Desarrollo Web:</strong> HTML es el pilar de cualquier página web. CSS y JavaScript actúan sobre su
@@ -361,14 +478,14 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
       </ul>
 
       <audio controls>
-        <source src="audios/audio6.mp3" type="audio/mpeg">
+        <source src="audios/audio6.aac" type="audio/mpeg">
         Tu navegador no soporta el audio.
       </audio>
 
     </section>
 
-    <section>
-      <h2>Recursos útiles</h2>
+    <section id="recursos">
+      <h2><i class="fa-solid fa-screwdriver-wrench"></i> Recursos útiles</h2>
       <p id="texto-lectura">Para profundizar en estos lenguajes se recomiendan recursos oficiales y educativos de
         calidad:</p>
       <ul>
@@ -381,15 +498,10 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
         <li><strong>W3Schools:</strong> Tutoriales prácticos y referencias rápidas (aunque sin rigor formal), útiles
           para ejemplos de HTML, XML y JSON.</li>
       </ul>
-
-      <audio controls>
-        <source src="audios/audio7.mp3" type="audio/mpeg">
-        Tu navegador no soporta el audio.
-      </audio>
     </section>
 
-    <section class="video-section">
-      <h2>Video informativo sobre Lenguajes de Marcas</h2>
+    <section class="video-section" id="video">
+      <h2><i class="fa-solid fa-video"></i> Video informativo sobre Lenguajes de Marcas</h2>
       <div class="video-responsive">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/3CZCV5-HVRg?si=6Ds0hugJhK9Enn3z"
           title="YouTube video player" frameborder="0"
@@ -426,6 +538,26 @@ Dentro de &lt;head&gt; se define el título y metadatos, mientras que &lt;body&g
 
   <script src="script/lector1.js"></script>
   <script src="script/modal.js"></script>
+
+  <script>
+document.querySelectorAll('.carrusel').forEach(carrusel => {
+  let index = 0;
+  const slides = carrusel.querySelector('.slides');
+  const totalSlides = slides.children.length;
+
+  const moverSlide = (direccion) => {
+    index += direccion;
+    if (index < 0) index = totalSlides - 1;
+    if (index >= totalSlides) index = 0;
+
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  carrusel.querySelector('.btn-prev').addEventListener('click', () => moverSlide(-1));
+  carrusel.querySelector('.btn-next').addEventListener('click', () => moverSlide(1));
+});
+</script>
+
 </body>
 
 </html>
