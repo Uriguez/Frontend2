@@ -64,9 +64,66 @@ header h1::after {
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------*/
+/* Navegación general */
 .navigation {
-  padding: 5px;
-  text-align: center;
+  background-color: #003f8a;
+  padding: 10px;
+  position: relative;
+}
+
+.navigation .menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navigation .nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation .nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+  .navigation .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background-color: black;
+  }
+
+  .navigation .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: #003f8a;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation .nav-list.active {
+    display: flex;
+  }
+
+  .navigation .nav-list li {
+    padding: 10px 0;
+    border-top: 1px solid #0057b8;
+  }
 }
 
 .navigation ul {

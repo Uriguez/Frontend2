@@ -27,12 +27,13 @@
   </header>
 
 <nav class="navigation">
-  <ul>
-    <li><a style="color: #000000" href="#definicion">¿Qué es?</a></li>
-    <li><a style="color: #000000" href="#clasificacion">Clasificaciones</a></li>
-    <li><a style="color: #000000" href="#usos">Usos</a></li>
-    <li><a style="color: #000000" href="#recursos">Recursos</a></li>
-    <li><a style="color: #000000" href="#video">Video</a></li>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <ul class="nav-list">
+    <li><a href="#definicion">¿Qué es?</a></li>
+    <li><a href="#clasificacion">Clasificaciones</a></li>
+    <li><a href="#usos">Usos comunes</a></li>
+    <li><a href="#recursos">Recursos utiles</a></li>
+    <li><a href="#video">Video informativo</a></li>
   </ul>
 </nav>
 
@@ -556,6 +557,12 @@ document.querySelectorAll('.carrusel').forEach(carrusel => {
   carrusel.querySelector('.btn-prev').addEventListener('click', () => moverSlide(-1));
   carrusel.querySelector('.btn-next').addEventListener('click', () => moverSlide(1));
 });
+</script>
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('.nav-list');
+    navList.classList.toggle('active');
+  }
 </script>
 
 </body>
